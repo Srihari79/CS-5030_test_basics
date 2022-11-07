@@ -35,7 +35,7 @@ class todoservice{
     delete_todo(id){
         const todo = this.todos.todo[0]
         if(todo) {
-            todos.splice(0, 1)
+            this.todos.todo.splice(0, 1)
         }
         return this.todos.todo;
     }
