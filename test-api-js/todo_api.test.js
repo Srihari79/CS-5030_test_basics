@@ -26,4 +26,24 @@ describe("todo api test suite", () => {
                 return done();
             })
 });
+   test("update todo /",(done)=>{
+    request(app).put("/todupdate")
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .end((err, res)=>{
+                if(err) return done(err);
+                
+                return done();
+            })
+});
+   test("delete todo /",(done)=>{
+    request(app).delete("/tododelete")
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .end((err, res)=>{
+                if(err) return done(err);
+                
+                return done();
+            })
+});
 });
