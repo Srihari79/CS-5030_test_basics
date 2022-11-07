@@ -23,7 +23,13 @@ class todoservice{
     }
 
     add_todo(todo){
-        // Your code here
+        todo = {
+            "title": "T4",
+            "description": "D1",
+            "done": false
+        }
+        this.todos.todo.push(todo);
+        return this.todos.todo;
     }
 
     delete_todo(id){
