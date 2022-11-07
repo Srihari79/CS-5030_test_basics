@@ -41,9 +41,9 @@ class todoservice{
     }
 
     update_todo(id, todo){
-        const todo = this.todos.todo[0]
-        if(todo.title == "T1") {
-            todo.done = true;
+        const todoupdate = this.todos.todo[0]
+        if(todoupdate.title == "T1") {
+            todoupdate.done = true;
         }
          return this.todos.todo;
     }
