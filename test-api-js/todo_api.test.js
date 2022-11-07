@@ -15,4 +15,15 @@ describe("todo api test suite", () => {
                         return done();
                     })
 });
+   test("add todo /",(done)=>{
+    request(app).post("/todoadd")
+            .expect('Content-Type', /json/)
+            .expect(200)
+            // .expect(res.body.todo.length).toEqual(3)
+            .end((err, res)=>{
+                if(err) return done(err);
+                
+                return done();
+            })
+});
 });
