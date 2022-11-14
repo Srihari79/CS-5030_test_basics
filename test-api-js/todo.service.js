@@ -5,11 +5,11 @@ class todoservice{
             "description": "D1",
             "done": false
         },{
-            "title": "T1",
+            "title": "T2",
             "description": "D1",
             "done": false
         },{
-            "title": "T1",
+            "title": "T3",
             "description": "D1",
             "done": false
         }]
@@ -23,15 +23,29 @@ class todoservice{
     }
 
     add_todo(todo){
-        // Your code here
+        todo = {
+            "title": "T4",
+            "description": "D1",
+            "done": false
+        }
+        this.todos.todo.push(todo);
+        return this.todos.todo;
     }
 
     delete_todo(id){
-        // Your code here
+        const todo = this.todos.todo[0]
+        if(todo) {
+            this.todos.todo.splice(0, 1)
+        }
+        return this.todos.todo;
     }
 
     update_todo(id, todo){
-        // Your code here
+        const todoupdate = this.todos.todo[0]
+        if(todoupdate.title == "T1") {
+            todoupdate.done = true;
+        }
+         return this.todos.todo;
     }
 }
 
